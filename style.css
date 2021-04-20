@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+}
+
+/*? Styling for Mobiles */
+@media only screen and (max-width: 375px) {
+  .card {
+    width: 90%;
+    height: 90%;
+
+    background-color: hsl(244, 38%, 16%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    border-radius: 5px;
+  }
+
+  .card div:first-child {
+    flex: 1;
+  }
+
+  .card div:last-child {
+    flex: 2;
+  }
+
+  .image-container {
+    position: relative;
+  }
+
+  .image-container div {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 5px 5px 0 0;
+
+    background-color: hsl(277deg 64% 61% / 56%);
+
+    border-radius: 5px 5px 0 0;
+    top: 0;
+    left: 0;
+  }
+
+  .image-container img {
+    height: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .image-container,
+  .image-container img {
+    width: 100%;
+  }
+
+  .card-text {
+    padding-top: 25px;
+  }
+
+  .card-text h1 {
+    color: white;
+
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .card-text h1 span {
+    color: hsl(277deg 100% 67%);
+  }
+
+  .card-text * {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-text p {
+    margin-top: 5%;
+
+    color: hsla(0, 0%, 100%, 0.75);
+
+    padding: 0 50px;
+  }
+
+  .card-text .features {
+    margin-top: 5%;
+  }
+
+  .card-text .features .feature {
+    margin-top: 10px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .feature strong {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+
+    color: white;
+  }
+
+  .feature span {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+
+    color: hsla(0, 0%, 100%, 0.6);
+  }
+}
+
+/*? Styling for the desktop  */
+@media only screen and (max-width: 1440px) {
+  .card {
+    width: 85%;
+    height: 50%;
+
+    background-color: hsl(244, 38%, 16%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+
+    border-radius: 5px;
+  }
+
+  /** Styling the image and the image container  */
+  .image-container {
+    height: 100%;
+
+    flex: 1;
+
+    position: relative;
+  }
+
+  .image-container img {
+    height: 100%;
+    width: 100%;
+
+    border-radius: 0 5px 5px 0;
+  }
+
+  .image-container div {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: hsl(277deg 64% 61% / 56%);
+  }
+
+  /** Styling the text of the card  */
+  .card-text {
+    height: 100%;
+
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  /* TODO Add the font-family to all text and also the font-weight */
+  .card-text h1 {
+    color: white;
+
+    font-size: 35px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+
+    width: 74%;
+  }
+
+  .card-text h1 span {
+    color: hsl(277deg 100% 67%);
+  }
+
+  .card-text p {
+    color: hsla(0, 0%, 100%, 0.75);
+
+    width: 74%;
+
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+
+    margin-top: 20px;
+  }
+
+  .features {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 89%;
+
+    margin-top: 60px;
+  }
+
+  .feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 10px;
+  }
+
+  .feature strong {
+    color: white;
+
+    font-size: 25px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+
+    width: 100%;
+  }
+
+  .feature span {
+    color: hsla(0, 0%, 100%, 0.6);
+
+    text-align: center;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
+}
